@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="15dp"
+              android:layout_height="match_parent">
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content">
+        <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                  android:hint="Search"
+                android:inputType="text"
+                  android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+   <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+       android:id="@+id/rvGifs"
+        android:layout_marginTop="10dp"
+                                                  tools:listitem="@layout/item_gif"
+                                               android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+       <ProgressBar
+               android:id="@+id/progress_bar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true" />
+
+       <TextView
+               android:id="@+id/txt_error"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:text="ERROR !! Tap to retry." />
+
+
+   </RelativeLayout>
+</LinearLayout>
